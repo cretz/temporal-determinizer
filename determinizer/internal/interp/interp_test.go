@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cretz/temporal-determinizer/interp"
+	"github.com/cretz/temporal-determinizer/determinizer/internal/interp"
 	"golang.org/x/tools/go/loader"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
