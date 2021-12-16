@@ -1,0 +1,2 @@
+This is taken from https://github.com/golang/tools/tree/master/go/ssa/interp. The only new file added is `temporal.go`
+and all other changes are done in code surrounded with `// @@TEMPORAL_BEGIN` and `// @@TEMPORAL_END`.
