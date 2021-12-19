@@ -3,6 +3,7 @@ module github.com/cretz/temporal-determinizer
 go 1.17
 
 require (
+	github.com/stretchr/testify v1.7.0
 	go.temporal.io/sdk v1.12.0
 	golang.org/x/tools v0.1.8
 )
@@ -21,7 +22,6 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/stretchr/objx v0.3.0 // indirect
-	github.com/stretchr/testify v1.7.0 // indirect
 	go.temporal.io/api v1.5.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/mod v0.5.1 // indirect

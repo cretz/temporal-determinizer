@@ -8,6 +8,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.temporal.io/sdk/testsuite"
 	"go.temporal.io/sdk/workflow"
+
+	// All the test workflows
+	_ "github.com/cretz/temporal-determinizer/determinizer/internal/test/workflows"
 )
 
 func TestDeterminizer(t *testing.T) {
