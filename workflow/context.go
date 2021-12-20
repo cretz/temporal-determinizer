@@ -9,14 +9,14 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
-var ErrNotInInterpreter = errors.New("can only be called in interpreter")
+var ErrNotInRuntime = errors.New("can only be called in alternative runtime")
 
 var currentWorkflowContext workflow.Context
 var entireWorkflowDoneCh = make(chan struct{}, 1)
 
 func workflowContext() workflow.Context {
 	if currentWorkflowContext == nil {
-		panic(ErrNotInInterpreter)
+		panic(ErrNotInRuntime)
 	}
 	return currentWorkflowContext
 }

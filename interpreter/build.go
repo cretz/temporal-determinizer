@@ -1,4 +1,4 @@
-package determinizer
+package interpreter
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/cretz/temporal-determinizer/determinizer/internal/interp"
+	"github.com/cretz/temporal-determinizer/interpreter/internal/interp"
 	"go.temporal.io/sdk/temporal"
 	"go.temporal.io/sdk/worker"
 	"go.temporal.io/sdk/workflow"

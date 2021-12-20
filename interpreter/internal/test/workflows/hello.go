@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/cretz/temporal-determinizer/determinizer/internal/test"
+	"github.com/cretz/temporal-determinizer/interpreter/internal/test"
 	"github.com/cretz/temporal-determinizer/workflow"
 	"go.temporal.io/sdk/activity"
 )

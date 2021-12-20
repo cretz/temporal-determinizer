@@ -53,5 +53,5 @@ func ExecuteActivity(ctx context.Context, opts ActivityOptions, args ...interfac
 }
 
 func ProxyActivities(opts ActivityOptions, v interface{}) interface{} {
-	panic(ErrNotInInterpreter)
+	panic(ErrNotInRuntime)
 }

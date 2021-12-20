@@ -3,14 +3,14 @@ package test_test
 import (
 	"testing"
 
-	"github.com/cretz/temporal-determinizer/determinizer"
-	"github.com/cretz/temporal-determinizer/determinizer/internal/test"
+	"github.com/cretz/temporal-determinizer/interpreter"
+	"github.com/cretz/temporal-determinizer/interpreter/internal/test"
 	"github.com/stretchr/testify/require"
 	"go.temporal.io/sdk/testsuite"
 	"go.temporal.io/sdk/workflow"
 
 	// All the test workflows
-	_ "github.com/cretz/temporal-determinizer/determinizer/internal/test/workflows"
+	_ "github.com/cretz/temporal-determinizer/interpreter/internal/test/workflows"
 )
 
 func TestDeterminizer(t *testing.T) {
@@ -36,7 +36,7 @@ func (r *run) run(t *testing.T) {
 	var firstWorkflowName string
 	builtWorkflows := map[string]interface{}{}
 	for _, w := range r.AllWorkflows() {
-		fn, funcName, err := determinizer.BuildFunc(determinizer.WithWorkflowFunc(w))
+		fn, funcName, err := interpreter.BuildFunc(interpreter.WithWorkflowFunc(w))
 		r.NoError(err, "failed building %v", r.Name)
 		if firstWorkflowName == "" {
 			firstWorkflowName = funcName
